@@ -5,13 +5,13 @@ title: An illustration for NesTPP
 --------
 
 ---
-# Latent Relation Inference and Popularity Prediction
+<h2>Latent Relation Inference and Popularity Prediction</h2>
 
-_Assumption_: posts with similar topic and tags are more likely to be posted and replied by some certain users. On the other hand posts which a user prefer posting and replying to would be highly related.
+_Assumption_: posts with similar topic and tags are more likely to be posted and replied by some certain users. On the other hand posts which a user prefer posting and replying to would be highly related.  
 
 ## Model
 
-![gcn_model](res/gcn_model.png)
+<div style="text-align:center"><img src="res/gcn_model.png" alt="figure1" width="600"/></div>   
 
 Given some information about posts from online social networks like Reddit, we propose a deep learning model to predict popularity of posts. Our model architecture consists of three components: a post encoder ![rf1], a context encoder ![rf2] and a regressor ![rf3].
 
@@ -53,11 +53,11 @@ The loss keeps decreasing from 0.032 to 1e-18 in both expectation and maximizati
 
 Popularity prediction is a regression task so the evaluation metric we use is mean absolute error (MAE). We perform 10 iteration of EM process, and in each iteration expectation runs 50 epochs and maximization runs 10 epochs. The final MAE on Reddit testing set is 5.71.
 
-![popularity prediction 100](res/popularity_prediction_100.png)
+<div style="text-align:center"><img src="res/popularity_prediction_100.png" alt="figure1" width="600"/></div>   
 
-![initial adjacent matrix](res/initial_adjacent_matrix.png)
+<div style="text-align:center"><img src="res/initial_adjacent_matrix.png" alt="figure1" width="600"/></div>   
 
-![learned adjacent matrix](res/learned_adjacent_matrix.png)
+<div style="text-align:center"><img src="res/learned_adjacent_matrix.png" alt="figure1" width="600"/></div>   
 
 [rf1]: http://chart.apis.google.com/chart?cht=tx&chl=E_{POST}
 [rf2]: http://chart.apis.google.com/chart?cht=tx&chl=E_{CONTEXT}
